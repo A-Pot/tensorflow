@@ -90,7 +90,9 @@ def _create_dummy_repository(repository_ctx):
 
 def enable_tensorrt(repository_ctx):
     """Returns whether to build with TensorRT support."""
-    return int(get_host_environ(repository_ctx, _TF_NEED_TENSORRT, False))
+    # Override to true
+    return True
+    # return int(get_host_environ(repository_ctx, _TF_NEED_TENSORRT, False))
 
 def _get_tensorrt_static_path(repository_ctx):
     """Returns the path for TensorRT static libraries."""
