@@ -13,8 +13,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
 
-#if GOOGLE_CUDA && GOOGLE_TENSORRT
-
 #include "tensorflow/core/framework/common_shape_fns.h"
 #include "tensorflow/core/framework/op.h"
 #include "tensorflow/core/framework/op_kernel.h"
@@ -59,5 +57,3 @@ REGISTER_OP("TRTEngineOp")
     .Attr("static_engine: bool = true")
     .Attr("profile_strategy: string = ''");
 }  // namespace tensorflow
-
-#endif  // GOOGLE_CUDA && GOOGLE_TENSORRT
